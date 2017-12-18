@@ -1,0 +1,28 @@
+/**
+ * ShapeFactory.java
+ * @author Kamal Thapa(KT)
+ * @version 1.0
+ * @since Nov 9, 2017
+ * 
+ */
+package FactoryPattern;
+
+public class ShapeFactory {
+	
+	//Use getShape method to get the Object of Type Shape
+	public Shape getShape(String shapeType){
+		if(shapeType == null)
+			return null;
+		
+		if(shapeType.equalsIgnoreCase("Circle")){
+			return new Circle();
+		}else if(shapeType.equalsIgnoreCase("Rectangle")){
+			return new Rectangle();
+		}else if(shapeType.equalsIgnoreCase("Square")){
+			return new Square();
+		}
+	
+	return null;
+	}
+
+}
